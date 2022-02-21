@@ -20,7 +20,7 @@ docker-compose down
 
 Configure ssl
 ```
-docker exec -i ampache sh /home/usr/ssl_setup
+docker exec -i ampache sh /home/usr/ssl_setup.sh
 ```
 
 
@@ -39,11 +39,11 @@ mysql -u ampache -p -h localhost ampache < /home/usr/backup.sql
 
 Backup volume folders to tars: 
 ```
-docker run --rm --volumes-from ampache -v /home/pi/ampache_docker/volume_backup:/backup busybox sh /backup/backup_script
+docker run --rm --volumes-from ampache -v /home/pi/ampache_docker/volume_backup:/backup busybox sh /backup/backup_script.sh
 ```
 
 
 Restore tar files from tars: 
 ```
-docker run --rm --volumes-from ampache -v /home/pi/ampache_docker/volume_backup:/backup busybox sh /backup/restore_script
+docker run --rm --volumes-from ampache -v /home/pi/ampache_docker/volume_backup:/backup busybox sh /backup/restore_script.sh
 ```
