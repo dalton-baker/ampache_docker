@@ -16,15 +16,13 @@ services:
       - /disks/Media:/disks/Media
       - /home/pi/ampache_docker/user_folder/:/home/usr
       - /etc/letsencrypt:/etc/letsencrypt
+      - /home/pi/ampache_docker/sites_enabled:/etc/apache2/sites-enabled
 
       - sql:/var/lib/mysql
       - logs:/var/log/ampache
       - config:/var/www/config
       - sql_config:/etc/mysql
-
-    #command: sh /home/usr/ssl_setup
     
-  
 volumes:
   sql:
   logs:
