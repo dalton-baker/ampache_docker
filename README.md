@@ -18,16 +18,6 @@ Kill container with compose:
 docker-compose down
 ```
 
-Configure ssl
-```
-docker exec -i ampache sh /home/usr/ssl_setup.sh
-```
-
-Start container and Configure ssl
-```
-docker-compose up -d; docker exec -i ampache sh -c "a2enmod ssl service apache2 stop;service apache2 start;"
-```
-
 
 ## Backup & Restore
 
