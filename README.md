@@ -44,11 +44,11 @@ mysql -u ampache -p -h localhost ampache < /home/usr/backup.sql
 
 Backup volume folders to tars: 
 ```
-docker run --rm --volumes-from ampache -v /home/pi/ampache_docker/volume_backup:/backup busybox sh /backup/backup_script.sh
+docker run --rm --volumes-from ampache -v /home/pi/ampache_docker/backups:/backup busybox sh /backup/scripts/backup_script.sh
 ```
 
 
 Restore tar files from tars: 
 ```
-docker run --rm --volumes-from ampache -v /home/pi/ampache_docker/volume_backup:/backup busybox sh /backup/restore_script.sh
+docker run --rm --volumes-from ampache -v /home/pi/ampache_docker/backups:/backup busybox sh /backup/scripts/restore_script.sh {backup-filename}.tar
 ```

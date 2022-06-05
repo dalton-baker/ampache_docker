@@ -7,16 +7,10 @@ services:
     container_name: ampache
     restart: unless-stopped
     
-    expose:
-      - 443
     ports:
       - 80:80
-      - 443:443
     volumes:
       - /disks/Media:/disks/Media
-      - /home/pi/ampache_docker/user_folder/:/home/usr
-      - /etc/letsencrypt:/etc/letsencrypt
-      - /home/pi/ampache_docker/sites_enabled:/etc/apache2/sites-enabled
 
       - sql:/var/lib/mysql
       - logs:/var/log/ampache
