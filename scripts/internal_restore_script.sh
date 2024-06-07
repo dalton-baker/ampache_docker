@@ -17,6 +17,7 @@ tar xf /backup/partial/sql-config-backup.tar --strip 2
 echo "      - restoring Ampache config"
 cd /var/www/config
 tar xf /backup/partial/config-backup.tar --strip 3
+chmod -R 777 /var/www/config
 
 echo "      - restoring Ampache logs"
 cd /var/log/ampache
@@ -24,6 +25,5 @@ tar xf /backup/partial/logs-backup.tar --strip 3
 
 #removed unpacked single file backups
 rm -r /backup/partial
-
 
 echo "   Finished restoring Ampache"

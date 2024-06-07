@@ -1,4 +1,0 @@
-volume_backup/*.tar
-backups/backup_*.tar
-backups/scheduled_backup_log.txt
-backups/.stignore
